@@ -3,46 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio — Labib Rahmattullah</title>
-  <link rel="stylesheet" href="body.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <title>Labib Rahmattullah — Cybersecurity & Digital Forensics</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
   <div class="noise"></div>
 
-  <nav class="navbar">
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
     <span class="nav-logo">Wixzy</span>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">Tentang</a></li>
-      <li><a href="#education">Pendidikan</a></li>
-      <li><a href="#career">Karir</a></li>
+      <li><a href="#achievements">Pencapaian</a></li>
+      <li><a href="#projects">Proyek</a></li>
+      <li><a href="#skills">Keahlian</a></li>
       <li><a href="#contact">Kontak</a></li>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema">
+      <span class="theme-text">MODE TERANG</span>
+    </button>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <section class="hero" id="about">
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">Tentang</a></li>
+      <li><a href="#achievements" onclick="closeMobile()">Pencapaian</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Proyek</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Keahlian</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Kontak</a></li>
+    </ul>
+  </div>
 
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="about">
     <div class="hero-text">
       <div class="hero-tag">
         <span class="dot"></span> Tersedia untuk Peluang Baru
       </div>
 
       <h1 class="hero-title">
-        <span class="line">Halo, saya</span>
-        <span class="line accent">Labib</span>
-        <span class="line italic">Rahmattullah.</span>
+        <span class="line">Labib</span>
+        <span class="line accent">Rahmattullah</span>
       </h1>
 
+      <p class="hero-role">Cybersecurity Enthusiast &amp; Security Engineer Intern</p>
+
       <p class="hero-sub">
-        Mahasiswa Teknik Informatika yang passionate di bidang
-        <em>Keamanan Siber</em> &amp; <em>Forensik Digital</em>.
-        Membangun fondasi kuat dari dunia akademis menuju industri.
+        Membangun karier di garis depan keamanan siber — dari forensik digital hingga penetration testing — dengan fondasi akademis yang kuat dan pengalaman langsung di industri.
       </p>
 
       <div class="hero-cta">
-        <a href="#career" class="btn-primary">Lihat Perjalanan →</a>
-        <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+        <a href="#projects" class="btn-primary">Lihat Proyek →</a>
+        <a href="#contact" class="btn-ghost">Unduh CV</a>
       </div>
 
       <div class="hero-stats">
@@ -57,8 +75,8 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-number">Security</span>
-          <span class="stat-label">Enthusiast</span>
+          <span class="stat-number">Intern</span>
+          <span class="stat-label">Security Eng.</span>
         </div>
       </div>
     </div>
@@ -66,207 +84,321 @@
     <div class="hero-photo-wrap">
       <div class="photo-glow"></div>
       <div class="photo-frame">
-
         <img
-          src="foto Labibr.jpg"
+          src="assets/Myphoto.png"
           alt="Foto Profil Labib Rahmattullah"
           class="profile-img"
           onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';"
         />
-
         <div class="photo-placeholder" id="photo-placeholder">
-          <div class="placeholder-icon">👤</div>
+          <div class="placeholder-icon"></div>
           <p class="placeholder-text">Foto Profil</p>
-          <p class="placeholder-hint">Ganti <code>src="foto-profil.jpg"</code><br/>dengan nama file foto kamu</p>
         </div>
-
       </div>
-
-      <div class="photo-badge badge-top">
-        <span class="badge-icon">🛡️</span>
-        <span>Cybersecurity</span>
-      </div>
-
-      <div class="photo-badge badge-bottom">
-        <span class="badge-icon">🔬</span>
-        <span>Digital Forensics</span>
-      </div>
-
-
+      <div class="photo-badge badge-top"><span class="badge-icon"></span><span>Cybersecurity</span></div>
+      <div class="photo-badge badge-bottom"><span class="badge-icon"></span><span>Digital Forensics</span></div>
       <div class="corner corner-tl"></div>
       <div class="corner corner-br"></div>
     </div>
-
   </section>
 
-
-  <section class="section" id="education">
+  <!-- ─── KEY ACHIEVEMENTS ─── -->
+  <section class="section" id="achievements">
     <div class="section-label">
       <span class="label-line"></span>
-      <span>PENDIDIKAN</span>
+      <span>PENCAPAIAN UTAMA</span>
     </div>
+    <h2 class="section-title">Prestasi &amp; <em>Sertifikasi</em></h2>
 
-    <h2 class="section-title">Latar Belakang <br/><em>Akademis</em></h2>
+    <div class="achievements-grid">
 
-    <div class="edu-grid">
-      <div class="edu-card main-card">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-content">
-          <p class="edu-year">2024 — Sekarang</p>
-          <h3>S1 Teknik Informatika</h3>
-          <p class="edu-school">Universitas Muhammadiyah Tangerang</p>
-          <p class="edu-desc">
-            Fokus pada bidang keamanan jaringan, forensik digital, dan administrasi sistem Linux.
-            Aktif mengerjakan lab praktis menggunakan Parrot OS dan berbagai tool security.
-          </p>
-          <div class="edu-tags">
-            <span>Keamanan Siber</span>
-            <span>Forensik Digital</span>
-            <span>Linux</span>
-            <span>Jaringan</span>
-          </div>
+            <div class="achieve-card">
+        <div class="achieve-body">
+          <h3>NOVO CLUB BATCH 4</h3>
+          <p class="achieve-org"> BY Paragon Corp · 2026</p>
+          <p>Mengembangkan kompetensi non-teknis (soft skills) di bidang manajemen proyek, komunikasi profesional, dan kerja sama tim berskala nasional guna mempersiapkan kedalam dunia Industri.</p>
+        </div>
+        <div class="achieve-attach" style="margin-top: 1rem;">
+  <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-ghost" style="font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: fit-content;">
+    <span></span> Lihat Sertifikat Resmi
+  </a>
+</div>
+      </div>
+
+      <div class="achieve-card">
+        <div class="achieve-body">
+          <h3>Security Engineer Intern</h3>
+          <p class="achieve-org">PT Analisis Keamanan Siber · 2025</p>
+          <p>Pengalaman langsung mengelola Wazuh SIEM, melakukan penetration testing dengan Metasploit, dan analisis traffic jaringan menggunakan Wireshark.</p>
+        </div>
+  <div class="achieve-attach" style="margin-top: 1rem;">
+  <a href="assets/Labib_Rahmattullah_SERTIFIKAT_MAGANG_CYBERSECURITY.pdf" target="_blank" class="btn-ghost" style="font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: fit-content;">
+    <span></span> Lihat Sertifikat Resmi
+  </a>
         </div>
       </div>
 
-      <div class="edu-side">
-        <div class="edu-mini">
-          <span class="mini-icon">🏫</span>
-          <div>
-            <p class="mini-label">Universitas Muhammadiyah Tangerang</p>
-            <p class="mini-val">2024 — Sekarang</p>
-          </div>
+      <div class="achieve-card">
+        <div class="achieve-body">
+          <h3>AIESEC Future Leader</h3>
+          <p class="achieve-org">AIESEC International · 2025</p>
+          <p>Program kepemimpinan global yang mengasah soft skills esensial melalui komunikasi lintas budaya, manajemen kolaborasi lintas Universitas, dan ketajaman berpikir strategis.</p>
         </div>
-        <div class="edu-mini">
-          <span class="mini-icon">📜</span>
-          <div>
-            <p class="mini-label">Pengalaman</p>
-            <p class="mini-val">Intern · Security Engineer</p>
-          </div>
-        </div>
-        <div class="edu-mini">
-          <span class="mini-icon">🛡️</span>
-          <div>
-            <p class="mini-label">Tools</p>
-            <p class="mini-val">Nmap · Aircrack-NG</p>
-          </div>
-        </div>
-      </div>
+  <div class="achieve-attach" style="margin-top: 1rem;">
+  <a href="assets/AFL_Cert.pdf" target="_blank" class="btn-ghost" style="font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: fit-content;">
+    <span></span> Lihat Sertifikat Resmi
+  </a>
+</div>
     </div>
+      </div>
   </section>
 
-
-  <section class="section dark-section" id="career">
+  <!-- ─── FEATURED PROJECTS ─── -->
+  <section class="section dark-section" id="projects">
     <div class="section-label light">
       <span class="label-line light"></span>
-      <span>PERJALANAN KARIR</span>
+      <span>PROYEK UNGGULAN</span>
     </div>
+    <h2 class="section-title light">Hasil Nyata dari <em>Laboratorium</em></h2>
 
-    <h2 class="section-title light">Dari Lab Kampus <br/><em>Menuju Industri</em></h2>
+    <div class="projects-grid">
 
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-content">
-          <p class="timeline-date">2024</p>
-          <h3>Awal Perkuliahan</h3>
-          <p>Memulai perjalanan di dunia IT. Berkenalan dengan dasar-dasar pemrograman, jaringan komputer, dan sistem operasi Linux dari nol.</p>
-          <div class="timeline-tags">
-            <span>SIEM</span>
-            <span>CISCO</span>
-            <span>VScode</span>
+      <div class="project-card featured">
+        <div class="project-header">
+          <span class="project-num">01</span>
+          <div class="project-meta">
+            <span class="project-type">Penetration Testing</span>
+            <span class="project-year">2025</span>
           </div>
+        </div>
+        <h3 class="project-title">Network Vulnerability Assessment</h3>
+        <p class="project-problem"><strong>Masalah:</strong> Identifikasi celah keamanan pada infrastruktur jaringan internal perusahaan sebelum dieksploitasi pihak luar.</p>
+        <p class="project-role"><strong>Peran:</strong> Junior Security Analyst — melakukan scanning, enumerasi, dan dokumentasi temuan.</p>
+        <div class="project-tech">
+          <span>Nmap</span><span>Metasploit</span><span>Wireshark</span><span>Kali Linux</span>
+        </div>
+        <p class="project-result">✓ Ditemukan 12 celah kritis, semua terdokumentasi dan dipresentasikan ke tim senior.</p>
+
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot active"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-content">
-          <p class="timeline-date">2024</p>
-          <h3>AIESEC Future Leader</h3>
-          <p>Bergabung dalam program kepemimpinan internasional, mengembangkan kemampuan komunikasi, kolaborasi lintas budaya, dan soft skill kepemimpinan.</p>
-          <div class="timeline-tags">
-            <span>Leadership</span>
-            <span>Softskill</span>
-            <span>Communication</span>
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-num">02</span>
+          <div class="project-meta">
+            <span class="project-type">Digital Forensics</span>
+            <span class="project-year">2025</span>
           </div>
+        </div>
+        <h3 class="project-title">Digital Evidence Recovery Lab</h3>
+        <p class="project-problem"><strong>Masalah:</strong> Simulasi investigasi forensik pada storage yang terenkripsi untuk menemukan bukti digital tersembunyi.</p>
+        <p class="project-role"><strong>Peran:</strong> Forensic Analyst — akuisisi image disk, analisis timeline, recovery file terhapus.</p>
+        <div class="project-tech">
+          <span>Autopsy</span><span>Sleuth Kit</span><span>Parrot OS</span><span>FTK Imager</span>
+        </div>
+        <p class="project-result">✓ Berhasil memulihkan 94% artefak digital dari media yang dianggap terhapus permanen.</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot active"></div>
-        <div class="timeline-line"></div>
-        <div class="timeline-content">
-          <p class="timeline-date">2025</p>
-          <h3>Security Engineer Intern</h3>
-          <p>Memulai karier sebagai Security Engineer Intern di PT Analisis Keamanan Siber, berfokus pada penguasaan alat keamanan sistem seperti Nmap, Metasploit, dan SIEM di lingkungan Linux.</p>
-          <div class="timeline-tags">
-            <span>Wazuh SIEM</span>
-            <span>Metasploit</span>
-            <span>Wireshark</span>
-            <span>OWASP ZAP</span>
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-num">03</span>
+          <div class="project-meta">
+            <span class="project-type">SIEM & Monitoring</span>
+            <span class="project-year">2025</span>
           </div>
         </div>
+        <h3 class="project-title">Wazuh SIEM Analyst</h3>
+        <p class="project-problem"><strong>Masalah:</strong> Membangun sistem monitoring keamanan real-time untuk mendeteksi anomali dan serangan secara otomatis.</p>
+        <p class="project-role"><strong>Peran:</strong> Security Engineer — instalasi, konfigurasi rules, dan tuning alert pada lingkungan virtual.</p>
+        <div class="project-tech">
+          <span>Wazuh</span><span>OWASP ZAP</span><span>Linux</span><span>VirtualBox</span>
+        </div>
+        <p class="project-result">✓ Sistem berhasil mendeteksi 100% simulasi serangan brute-force dalam pengujian lab.</p>
+        </div>
       </div>
+
+    </div>
   </section>
 
-
+  <!-- ─── SKILLS & TOOLS ─── -->
   <section class="section" id="skills">
     <div class="section-label">
       <span class="label-line"></span>
-      <span>KEAHLIAN</span>
+      <span>KEAHLIAN &amp; PERANGKAT</span>
     </div>
-    <h2 class="section-title">Tools &amp; <em>Teknologi</em></h2>
+    <h2 class="section-title">Tools &amp; <em>Kemampuan</em></h2>
 
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Sistem &amp; OS</h4>
-        <div class="skill-bars">
-          <div class="skill-row"><span>Parrot OS / Linux</span><div class="bar"><div class="fill" style="--w:80%"></div></div></div>
-          <div class="skill-row"><span>VirtualBox</span><div class="bar"><div class="fill" style="--w:75%"></div></div></div>
-          <div class="skill-row"><span>Windows</span><div class="bar"><div class="fill" style="--w:85%"></div></div></div>
+    <div class="skills-wrap">
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Sistem &amp; OS</h4>
+        <div class="skill-tags">
+          <span>Parrot OS</span>
+          <span>Kali Linux</span>
+          <span>Ubuntu Server</span>
+          <span>Windows Server</span>
+          <span>VirtualBox</span>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Security Tools</h4>
-        <div class="skill-bars">
-          <div class="skill-row"><span>Nmap</span><div class="bar"><div class="fill" style="--w:70%"></div></div></div>
-          <div class="skill-row"><span>Metasploit</span><div class="bar"><div class="fill" style="--w:60%"></div></div></div>
-          <div class="skill-row"><span>Autopsy / Sleuth Kit</span><div class="bar"><div class="fill" style="--w:65%"></div></div></div>
+
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Security Tools</h4>
+        <div class="skill-tags">
+          <span>Nmap</span>
+          <span>Metasploit</span>
+          <span>Wireshark</span>
+          <span>Wazuh SIEM</span>
+          <span>OWASP ZAP</span>
+          <span>Aircrack-NG</span>
+          <span>Burp Suite</span>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Development</h4>
-        <div class="skill-bars">
-          <div class="skill-row"><span>HTML &amp; CSS</span><div class="bar"><div class="fill" style="--w:72%"></div></div></div>
-          <div class="skill-row"><span>Python Dasar</span><div class="bar"><div class="fill" style="--w:55%"></div></div></div>
-          <div class="skill-row"><span>Bash Scripting</span><div class="bar"><div class="fill" style="--w:60%"></div></div></div>
+
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Digital Forensics</h4>
+        <div class="skill-tags">
+          <span>Autopsy</span>
+          <span>Sleuth Kit</span>
+          <span>FTK Imager</span>
+          <span>Volatility</span>
+          <span>Binwalk</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Development</h4>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>Bash Scripting</span>
+          <span>HTML &amp; CSS</span>
+          <span>JavaScript</span>
+          <span>Git</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Soft Skills</h4>
+        <div class="skill-tags">
+          <span>Analisis Kritis</span>
+          <span>Technical Writing</span>
+          <span>Presentasi</span>
+          <span>Komunikasi Lintas Budaya</span>
+          <span>Problem Solving</span>
+          <span>Team Collaboration</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h4 class="skill-cat-title">Jaringan</h4>
+        <div class="skill-tags">
+          <span>TCP/IP</span>
+          <span>Cisco Packet Tracer</span>
+          <span>VPN &amp; Firewall</span>
+          <span>DNS &amp; DHCP</span>
+          <span>Subnetting</span>
         </div>
       </div>
     </div>
   </section>
 
-
+  <!-- ─── CONTACT / CTA ─── -->
   <section class="contact-section" id="contact">
     <div class="contact-inner">
       <p class="contact-pre">Mari Terhubung</p>
       <h2 class="contact-title">Siap Berkolaborasi?</h2>
-      <p class="contact-sub">Saya terbuka untuk diskusi proyek, magang, atau sekadar ngobrol soal dunia siber.</p>
+      <p class="contact-sub">Saya terbuka untuk diskusi proyek, magang, atau sekadar ngobrol soal dunia siber dan keamanan digital.</p>
+
       <div class="contact-links">
-        <a href="mailto:labibrahmattullah@gmail.com" class="contact-btn"> Email Saya</a>
-        <a href="https://www.linkedin.com/in/labib-rahmattullah-7a32a3321" class="contact-btn ghost" target="_blank"> LinkedIn</a>
-        <a href="https://github.com/labibrahmattullah" class="contact-btn ghost" target="_blank"> GitHub</a>
+        <a href="mailto:labibrahmattullah@gmail.com" class="contact-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email Saya
+        </a>
+        <a href="https://www.linkedin.com/in/labib-rahmattullah-7a32a3321" class="contact-btn ghost" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/labibrahmattullah" class="contact-btn ghost" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          GitHub
+        </a>
+        <a href="assets/Labib_Rahmattullah_CV.pdf" class="contact-btn gold" onclick="downloadCV(event)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Unduh CV
+        </a>
       </div>
     </div>
     <div class="contact-deco">Wixzy</div>
   </section>
 
   <footer class="footer">
-    <p>© 2024 Labib Rahmattullah · Teknik Informatika · Angkatan 2024</p>
-    <p class="footer-sub">Email:labibrahmattullah@gmail.com</p>
+    <p>© 2026 Labib Rahmattullah · Cybersecurity & Digital Forensics · Angkatan 2024</p>
+    <p class="footer-sub">labibrahmattullah@gmail.com · Universitas Muhammadiyah Tangerang</p>
   </footer>
 
+  <!-- ─── ADD ACHIEVEMENT MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="addModal">
+      <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('active')">✕</button>
+      <h3 class="modal-title">Tambah Pencapaian</h3>
+      <div class="modal-form">
+        <div class="form-group">
+          <label>Judul Pencapaian</label>
+          <input type="text" id="achTitle" placeholder="e.g. CompTIA Security+" />
+        </div>
+        <div class="form-group">
+          <label>Organisasi / Penerbit</label>
+          <input type="text" id="achOrg" placeholder="e.g. CompTIA · 2025" />
+        </div>
+        <div class="form-group">
+          <label>Deskripsi</label>
+          <textarea id="achDesc" rows="3" placeholder="Deskripsi singkat pencapaian ini..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Ikon (emoji)</label>
+          <input type="text" id="achIcon" placeholder="🏆" maxlength="4" />
+        </div>
+        <div class="form-group">
+          <label>Dokumen Pendukung (opsional)</label>
+          <label class="attach-btn full-width">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" id="achFile" />
+            <span class="attach-icon">📎</span>
+            <span id="achFileLabel">Pilih File</span>
+          </label>
+        </div>
+        <button class="btn-primary full-btn" onclick="saveAchievement()">Simpan Pencapaian</button>
+      </div>
+    </div>
+  </div>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+
+    // 1. Cek pilihan tema user yang tersimpan di browser saat halaman pertama dimuat
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = '<span class="theme-icon"></span> <span class="theme-text">MODE GELAP</span>';
+      }
+    }
+
+    // 2. Fungsi klik tombol untuk bolak-balik tema (Toggle)
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        // Berganti class: jika ada maka dihapus, jika tidak ada maka ditambah
+        document.body.classList.toggle('light-mode');
+        
+        // 3. Cek kondisi class saat ini untuk menentukan langkah selanjutnya
+        if (document.body.classList.contains('light-mode')) {
+          // Jika sekarang mode terang: simpan status dan ubah tombol jadi opsi ke Gelap
+          localStorage.setItem('theme', 'light');
+          themeToggleBtn.innerHTML = '<span class="theme-icon"></span> <span class="theme-text">MODE GELAP</span>';
+        } else {
+          // Jika sekarang mode gelap: simpan status dan ubah tombol jadi opsi ke Terang
+          localStorage.setItem('theme', 'dark');
+          themeToggleBtn.innerHTML = '<span class="theme-icon"></span> <span class="theme-text">MODE TERANG</span>';
+        }
+      });
+    }
+  </script>
+  <script src="app.js"></script>
 </body>
 </html>
